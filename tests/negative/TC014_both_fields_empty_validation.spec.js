@@ -1,13 +1,11 @@
 const { test, expect } = require("../../utils/testBase");
-const LoginPage = require("../../pages/loginPage");
 
 test.describe("TC014 - Validation for Both Fields Empty", () => {
-  test.beforeEach(async ({ page }) => {
-    await new LoginPage(page).navigate();
+  test.beforeEach(async ({ page, loginPage, testData }) => {
+    await loginPage.navigate();
   });
 
-  test("Validate login is blocked when both username and password are empty", async ({ page }) => {
-    const loginPage = new LoginPage(page);
+  test("Validate login is blocked when both username and password are empty", async ({ page, loginPage, testData }) => {
     await loginPage.login("", "");
 
     await expect(loginPage.getDashboardElement()).not.toBeVisible({ timeout: 3000 });

@@ -1,8 +1,17 @@
 const { test: base, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
+const LoginPage = require("../pages/loginPage");
+const { requireValidCredentials, getTestData } = require("./testData");
 
-const test = base;
+const test = base.extend({
+  loginPage: async ({ page }, use) => {
+    await use(new LoginPage(page));
+  },
+  testData: async ({}, use) => {
+    await use(getTestData());
+  }
+});
 
 test.afterEach(async ({ page }, testInfo) => {
   if (testInfo.status === "failed") {
@@ -21,4 +30,4 @@ test.afterEach(async ({ page }, testInfo) => {
   }
 });
 
-module.exports = { test, expect };
+module.exports = { test, expect, requireValidCredentials };

@@ -97,5 +97,6 @@ You can override at runtime with environment variables:
 
 - Base URL is configured in `playwright.config.js`.
 - Browser launches maximized via Playwright `launchOptions`.
+- Test scripts are fixture-driven via `utils/testBase.js` (`loginPage`, `testData`) for reusable, real-world maintainability.
 - Failure screenshots are auto-captured by `utils/testBase.js`.
 - `TC036` is marked as a known bug expectation because Forgot Password link is missing in current UI.

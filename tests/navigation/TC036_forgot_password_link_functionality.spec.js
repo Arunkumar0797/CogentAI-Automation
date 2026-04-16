@@ -1,15 +1,13 @@
 const { test, expect } = require("../../utils/testBase");
-const LoginPage = require("../../pages/loginPage");
 
 test.describe("TC036 - Forgot Password Link Functionality", () => {
   test.fail(true, "Known product bug: Forgot Password/Reset Password link is missing on login page.");
 
-  test.beforeEach(async ({ page }) => {
-    await new LoginPage(page).navigate();
+  test.beforeEach(async ({ page, loginPage, testData }) => {
+    await loginPage.navigate();
   });
 
-  test("Verify clicking Forgot Password opens the password recovery flow", async ({ page }) => {
-    const loginPage = new LoginPage(page);
+  test("Verify clicking Forgot Password opens the password recovery flow", async ({ page, loginPage, testData }) => {
     const forgotPasswordLink = loginPage.getForgotPasswordLink();
     await expect(forgotPasswordLink).toBeVisible();
 

@@ -1,13 +1,11 @@
 const { test, expect } = require("../../utils/testBase");
-const LoginPage = require("../../pages/loginPage");
 
 test.describe("TC003 - Welcome Heading Is Displayed", () => {
-  test.beforeEach(async ({ page }) => {
-    await new LoginPage(page).navigate();
+  test.beforeEach(async ({ page, loginPage, testData }) => {
+    await loginPage.navigate();
   });
 
-  test('Verify login page displays the heading "Welcome to CogentAI"', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await expect(loginPage.heading).toBeVisible();
+  test('Verify login page displays the heading "Welcome to CogentAI"', async ({ page, loginPage, testData }) => {
+        await expect(loginPage.heading).toBeVisible();
   });
 });

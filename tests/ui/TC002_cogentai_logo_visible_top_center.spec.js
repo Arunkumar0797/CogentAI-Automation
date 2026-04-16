@@ -1,14 +1,12 @@
 const { test, expect } = require("../../utils/testBase");
-const LoginPage = require("../../pages/loginPage");
 
 test.describe("TC002 - CogentAI Logo Is Visible at the Top Center", () => {
-  test.beforeEach(async ({ page }) => {
-    await new LoginPage(page).navigate();
+  test.beforeEach(async ({ page, loginPage, testData }) => {
+    await loginPage.navigate();
   });
 
-  test("Verify login page shows CogentAI logo in the top-center area", async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await expect(loginPage.logo).toBeVisible();
+  test("Verify login page shows CogentAI logo in the top-center area", async ({ page, loginPage, testData }) => {
+        await expect(loginPage.logo).toBeVisible();
 
     const box = await loginPage.logo.boundingBox();
     const viewport = page.viewportSize();
