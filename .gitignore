@@ -1,0 +1,7 @@
+node_modules/
+playwright-report/
+test-results/
+
+# Keep screenshots folder, ignore generated image artifacts
+screenshots/*.png
+!screenshots/.gitkeep

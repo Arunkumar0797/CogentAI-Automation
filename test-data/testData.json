@@ -1,0 +1,16 @@
+{
+  "validEmail": "arunkumar@cogentai.com",
+  "validUsername": "arunkumar",
+  "validPassword": "Code$2025",
+  "wrongPassword": "WrongPass@123",
+  "nonExistentUser": "nouser_qa_automation",
+  "invalidEmailFormat": "invalid-email-format@",
+  "minimumEmail": "a@b.co",
+  "maximumEmail": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@c.com",
+  "minimumPassword": "Ab1@xy",
+  "maximumPassword": "Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!Aa1!",
+  "singleCharacterUsername": "a",
+  "specialCharacterEmail": "qa+login_test@cogentai.com",
+  "specialCharacterOnlyPassword": "!@#$%^&*()_+-=[]{}|;:,.<>?",
+  "whitespaceOnly": "   "
+}

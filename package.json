@@ -1,0 +1,33 @@
+{
+  "name": "cogentai-playwright-pom",
+  "version": "1.0.0",
+  "description": "Playwright automation framework for CogentAI login",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep \"@smoke\"",
+    "test:smoke:headed": "playwright test --grep \"@smoke\" --headed",
+    "test:regression": "playwright test",
+    "test:regression:headed": "playwright test --headed",
+    "test:ui": "playwright test tests/ui",
+    "test:functional": "playwright test tests/functional",
+    "test:negative": "playwright test tests/negative",
+    "test:field": "playwright test tests/field-behavior",
+    "test:boundary": "playwright test tests/boundary",
+    "test:accessibility": "playwright test tests/accessibility",
+    "test:navigation": "playwright test tests/navigation",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "pom",
+    "qa"
+  ],
+  "author": "Senior QA Automation Engineer",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2"
+  }
+}
