@@ -30,8 +30,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run smoke suite
-        run: npm run test:smoke
+      - name: Run smoke quality gate
+        run: npm run test:quality-gate
 
       - name: Upload Playwright report
         if: always()

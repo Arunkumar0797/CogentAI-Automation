@@ -7,7 +7,7 @@ If any selector below changes in the UI, tests should fail and the contract must
 
 Applies to:
 - [pages/loginPage.js](D:/CogentAI%20-%20Automation/pages/loginPage.js)
-- Login-related tests in [tests](D:/CogentAI%20-%20Automation/tests)
+- Login-related tests in [tests/auth/login](D:/CogentAI%20-%20Automation/tests/auth/login)
 
 ## Strict Selectors
 
@@ -40,9 +40,9 @@ Applies to:
 - Selector: `div.mb-10 svg`
 - Purpose: Verify logo visibility on login screen.
 
-8. Dashboard marker after successful login
-- Selector: `getByRole('heading', { name: /dashboard/i })`
-- Purpose: Confirm successful post-login landing.
+8. Authenticated landing marker after successful login
+- Selector: `getByRole('button', { name: /^start$/i })` OR `getByPlaceholder(/ask anything/i)`
+- Purpose: Confirm authenticated workspace is visible after login.
 
 ## Contract Rules
 

@@ -5,18 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
+    "test:login": "playwright test tests/auth/login",
     "test:headed": "playwright test --headed",
+    "test:login:headed": "playwright test --headed tests/auth/login",
     "test:smoke": "playwright test --grep \"@smoke\"",
     "test:smoke:headed": "playwright test --grep \"@smoke\" --headed",
+    "test:quality-gate": "playwright test --grep \"@smoke\" --max-failures=1",
     "test:regression": "playwright test --grep \"@regression\"",
     "test:regression:headed": "playwright test --headed --grep \"@regression\"",
-    "test:ui": "playwright test tests/ui",
-    "test:functional": "playwright test tests/functional",
-    "test:negative": "playwright test tests/negative",
-    "test:field": "playwright test tests/field-behavior",
-    "test:boundary": "playwright test tests/boundary",
-    "test:accessibility": "playwright test tests/accessibility",
-    "test:navigation": "playwright test tests/navigation",
+    "test:list": "playwright test --list",
     "report": "playwright show-report"
   },
   "keywords": [
